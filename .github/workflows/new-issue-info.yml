@@ -1,10 +1,9 @@
 name: New Issue Info
 on:
   issues:
-    types: [opened]
 jobs:
   notify:
     runs-on: ubuntu-20.04
     steps:
       - name: Repo info
-        run: echo "${{ toJson(github) }}"
+        run: echo "${{ toJson(github.event) }}"
