@@ -7,4 +7,4 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: Repo info
-        run: echo "${{ github }}"
+        run: echo "${{ toJson(github) }}"
